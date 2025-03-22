@@ -1,2 +1,3 @@
-let a=03
-let b=02
+let a='009';
+let num=Number(a)
+console.log(num)

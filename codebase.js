@@ -1,16 +1,35 @@
+// Função que atualiza a bandeira com base no estado selecionado
+function atualizarBandeira() {
+    let estado = document.querySelector('#estado').value.trim(); // Pegando o valor do select
+    let bandeira = document.querySelector('#div-estado'); // Pegando a div da bandeira
+    
+    // Definir a bandeira com base no estado selecionado
+    if (estado === 'São Paulo') {
+        bandeira.style.backgroundImage = "url('imagens/sao-paulo-bandeira.jpg')";
+    } else if (estado === 'Minas Gerais') {
+        bandeira.style.backgroundImage = "url('imagens/minas-gerais-bandeira.webp')";
+    } else if (estado === 'Rio De Janeiro') {
+        bandeira.style.backgroundImage = "url('imagens/rio-de-janeiro-bandeira.webp')";
+    } else {
+        bandeira.style.backgroundImage = "url('imagens/bandeira-espirito-santo.webp')"; // Caso o estado não tenha bandeira configurada
+    }
+}
+
+// Função que é chamada ao clicar no botão
 function clicar() {
     let array = [' O Nome', 'A Data De Nascimento', 'O Email', 'A Senha', 'A Confirmação Da Senha'];
-    let vetor = [];
+    
+    // Pegando os valores dos campos dentro da função clicar
     let nome = document.querySelector('#inpnome').value;
     let nasc = document.querySelector("#nascimento").value;
     let email = document.querySelector("#email").value;
     let senha = document.querySelector("#senha").value;
     let csenha = document.querySelector("#confirmar-senha").value;
-    let bandeira = document.querySelector("#bandeiras-estados");
-
+    // Verificar se as senhas coincidem
     if (senha != csenha) {
         window.alert('As Senhas São Diferentes!');
     } else {
+        // Verificar se todos os campos obrigatórios foram preenchidos
         if (nome == '') {
             window.alert(`Digite ${array[0]} Para Continuarmos`);
             return;
@@ -27,9 +46,10 @@ function clicar() {
             window.alert(`Digite ${array[4]} Para Continuarmos`);
             return;
         } else {
-            let ano = nasc.slice(0, 3);
-            let mes = nasc.slice(6, 6);
-            let dia = nasc.slice(8, 9);
+            // Calcular a idade com base na data de nascimento
+            let ano = nasc.slice(0, 4);
+            let mes = nasc.slice(5, 7);
+            let dia = nasc.slice(8, 10);
             ano = Number(ano);
             mes = Number(mes);
             dia = Number(dia);
@@ -37,19 +57,15 @@ function clicar() {
             let mesatual = 3;
             let diaatual = 22;
             let anoatual = 2025;
-
             let idade = anoatual - ano;
 
-            if (mes < mesatual || (mes == mesatual && dia <= diaatual)) {
-                idade += 1;
-                
-            } else {
-                idade += 0;
-                
+            if (mes > mesatual || (mes == mesatual && dia > diaatual)) {
+                idade -= 1;
             }
-        vetor.push(nome);
-        window.alert(vetor[0])
-        
+
         }
     }
 }
+
+// Chama a função de atualizar bandeira quando o estado for alterado
+document.querySelector('#estado').addEventListener('change', atualizarBandeira);
