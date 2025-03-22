@@ -1,0 +1,140 @@
+@font-face {
+    font-family:"special-font" ;
+    src: url(fontes/Super\ Dream.ttf) format(truetype);
+}
+:root{
+    --fonte-especial:"special-font"
+}
+body{
+    background-color:rgb(1, 1, 78);
+    margin:0px;
+
+}
+html{
+    font-size:16px;
+}
+main{
+    width:100%;
+    height:100%;
+    background-color:rgb(1, 1, 78);
+    display:flex;
+    justify-content:space-between;
+    flex-flow:row nowrap;
+    margin:0px; 
+}
+#animacao{
+    width:50vw;
+    height:99vh;
+    border-radius:8px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-top:3px;
+    margin-bottom:3px;
+
+}
+#formulario{
+    width:50vw;
+    height:99.9vh;
+    background-color:rgb(123, 255, 0);
+    border-radius:8px;
+
+}
+#titulo-form{
+    font-family:var(--fonte-especial);
+    font-size:3rem;
+    color:rgb(1, 1, 78);
+    text-align:center;
+}
+#cont-form{
+    width:95%;
+    height:80%;
+    background-color:rgb(1, 1, 78);
+    border-radius:8px;
+    margin:auto;
+    box-shadow:4px 4px 4px black;
+}
+.paragrafo-input{
+    color:rgb(123, 255, 0);
+    font-family:var(--fonte-especial);
+    font-size:1.5rem;
+    
+}
+#inpnome{
+    outline:2px solid rgb(123, 255, 0);
+    border:1px solid rgb(1, 1, 78);
+    border-radius:4px;
+    color:blue   
+}
+#nascimento{
+    outline:2px solid rgb(123, 255, 0);
+    border:1px solid rgb(1, 1, 78);
+    border-radius:4px;  
+    color:blue;
+}
+#email{
+    outline:2px solid rgb(123, 255, 0);
+    border:1px solid rgb(1, 1, 78);
+    border-radius:4px;  
+    color:blue;
+}
+#senha{
+    outline:2px solid rgb(123, 255, 0);
+    border:1px solid rgb(1, 1, 78);
+    border-radius:4px;  
+    color:blue;
+}
+#confirmar-senha{
+    outline:2px solid rgb(123, 255, 0);
+    border:1px solid rgb(1, 1, 78);
+    border-radius:4px;  
+    color:blue;
+}
+#submit{
+    border-radius:4px;
+    outline:2px solid rgb(123, 255, 0);
+    border:1px solid rgb(1, 1, 78);
+    padding: 4px;
+    color:blue;
+    display:block;
+    margin:auto;
+    box-shadow:4px 4px 4px black;
+}
+#inpnome::placeholder{
+    color:blue;
+    opacity:1;
+}
+#nascimento::placeholder{
+    color:blue;
+    opacity:1;
+}#email::placeholder{
+    color:blue;
+    opacity:1;
+}#senha::placeholder{
+    color:blue;
+    opacity:1;
+}#confirmar-senha::placeholder{
+    color:blue;
+    opacity:1;
+}
+#submit:hover{
+    background-color:rgb(123, 255, 0);
+    color:blue;
+    border:2px solid blue;
+    outline:3px solid blue;
+}
+#container-select{
+    display:flex;
+    flex-flow:row;
+    width:90%;
+    height:9vh;
+}
+#estado{
+    height:4vh;
+    margin-top:25px;
+    margin-left:4px;
+    outline:2px solid rgb(123, 255, 0);
+    border:1px solid rgb(1, 1, 78);
+    border-radius:4px;
+    color:blue;
+}

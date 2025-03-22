@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projeto form</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <main>
+      <div id="animacao">
+      <img src="animation.svg" alt="">
+      </div>
+    
+      <div id="formulario">
+        <h1 id="titulo-form">Formulário De Login</h1>
+        <div id="cont-form">
+        <form action="#">
+            <p class="paragrafo-input">Nome Completo: <input type="text" name="nome" id="inpnome" placeholder="Digite Aqui Seu Nome:"></p>
+
+            <p class="paragrafo-input">Data De Nascimento: <input type="date" name="nasc" id="nascimento"></p>
+
+            <p class="paragrafo-input">Email: <input type="email" name="email" id="email" placeholder="Digite Seu Email:"></p>
+            <div id="container-select">
+                <p class="paragrafo-input">Estado :</p>
+                <select name="estado" id="estado">
+                    <option value="Minas Gerais">Minas Gerais</option>
+                    <option value="São Paulo">São Paulo</option>
+                    <option value="Rio De Janeiro">Rio De Janeiro</option>
+                    <option value="EspirítO Santo">Espiríto Santo</option>
+                </select>
+            </div>
+
+            <p class="paragrafo-input">Senha: <input type="password" name="senha" id="senha" placeholder="Digite Sua Senha:"></p>
+
+            <p class="paragrafo-input"> Confirmar Senha: <input type="password" name="senha" id="confirmar-senha" placeholder="Confirme Sua Senha:"></p>
+
+            <input onclick="clicar()" type="submit" value="Enviar Formulário" id="submit">
+
+            <div id="bandeiras-estados">
+             
+            </div>
+        </form>
+        </div>
+       
+      </div>
+
+    </main>
+
+    <footer>
+
+    </footer>
+<script src="codebase.js"></script>    
+</body>
+</html>
